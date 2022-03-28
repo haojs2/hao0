@@ -2,6 +2,6 @@ const express=require('express');
 const app=express();
 const port=process.env.PORT||3000;
 app.get('/',(req,res)=>{
-    return res.send('hello world!');
+    return res.send('hello world!2');
 })
 app.listen(port,()=>{console.log(`localhost: ${port}`)});
