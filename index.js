@@ -5,12 +5,12 @@ const io = require('socket.io')(http);
 const port=process.env.PORT||3000;
 
 app.get('/',(req,res)=>{
-    return res.sendFile(__dirname+'\\index.html');
+    return res.sendFile(__dirname+'/index.html');
 })
 io.on('connection', (socket) => {
     socket.on('chat message', msg => {
       io.emit('chat message', msg);
     });
   });
-  
+
 http.listen(port,()=>{console.log(`localhost: ${port}`)});
